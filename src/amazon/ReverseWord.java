@@ -25,24 +25,24 @@ public class ReverseWord {
 	}
 	
 	 public static void reverseWords() {
-	    reverseString(0, str.length);
+	    reverseString(str, 0, str.length);
 	 //   System.out.println("test "+ Arrays.toString(str));
 	    int start =0;
 	     for(int i =0 ; i< str.length ; i++) {
 	    	 if(str[i] == ' ' || i == str.length-1) {
-	    		 System.out.println(start + " "  + i);
+	    	//	 System.out.println(start + " "  + i);
 	    		 if(i == str.length-1 ) { 
 	    			 i =str.length;
 	    		 }
-	    		 reverseString(start, i);
-	    		 System.out.println("test 2"+ Arrays.toString(str));
+	    		 reverseString(str, start, i);
+	    	//	 System.out.println("test 2"+ Arrays.toString(str));
 	    		 start= i+1;
 	    	 }
 	     }
 	        
 	 }
 	 
-	 public static void reverseString(int start , int end ) {
+	 public static void reverseString(char[] str ,int start , int end ) {
 		 if(start != end) {
 			 int endt = end-1;
 			 for(int i= start ; i < (start+end)/2 ; i++) {
